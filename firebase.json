@@ -8,20 +8,13 @@
     ],
     "rewrites": [
       {
-        "source": "/stuff",
-        "destination": "/stuff.html"
-      },
-      {
         "source": "/",
         "destination": "/index.html"
       },
       {
         "source": "/error",
         "destination": "/404.html"
-      },
-      {
-        "source": "/home",
-        "destination": "/home.html"}
+      }
     ]
   },
   "remoteconfig": {
