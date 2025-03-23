@@ -18,7 +18,10 @@
       {
         "source": "/error",
         "destination": "/404.html"
-      }
+      },
+      {
+        "source": "/home",
+        "destination": "/home.html"}
     ]
   },
   "remoteconfig": {

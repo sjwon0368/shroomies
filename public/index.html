@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <link rel="icon" href="./src/images/15784.svg" type="image/svg">
+    <title>Shroomies</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
@@ -26,7 +27,7 @@
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      #container { text-align: center; }
+      #container { text-align: center; border-radius: 5px; }
       #message { background: white; max-width: 360px; margin: auto; padding: 32px 24px; border-radius: 3px; }
       #message h2 { color: #039be5; font-weight: bold; font-size: 24px; margin: 0 0 8px; }
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 16px; }
@@ -41,18 +42,19 @@
         border-radius: 50%; 
       }
       @keyframes spin { 100% { transform: rotate(360deg); } }
+      #logo { border-radius: 50%; }
     </style>
   </head>
   <body>
+    <div class="loading-icon"></div>
     <div id="container">
-      <div class="loading-icon"></div>
-      <div id="message" style="display: none;">
-        <h2>Hello!</h2>
-        <p>First time using Firebase?<br/>Edit the index.html file to start.</p>
+      <div id="message">
+        <img id="banner" src="./src/images/mainBanner.png" alt="Welcome!" width="100" height="100"><br/>
       </div>
     </div>
 
     <script>
+      $('#message').hide();
       $(document).ready(function() {
         $('.loading-icon').show();
         setTimeout(function() {
