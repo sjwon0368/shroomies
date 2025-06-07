@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/src/images/15784.svg" type="image/svg">
+    <title>Shroomies</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.4.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.4.0/firebase-database-compat.js"></script>
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-firestore-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-functions-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-messaging-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-storage-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-analytics-compat.js"></script> -->
+    <script defer src="/__/firebase/11.4.0/firebase-remote-config-compat.js"></script>
+    <!-- <script defer src="/__/firebase/11.4.0/firebase-performance-compat.js"></script> -->
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style media="screen">
+      body { text-align: center; background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; height: 100vh; justify-content: center; align-items: center; }
+      #container { display: flex; flex-direction: column; align-items: center; justify-content: center; overflow-y: auto; }
+      /*#message { background: white; max-width: 360px; margin: auto; padding: 32px 24px; border-radius: 3px; }*/
+      .top-banner {
+        display: flex;
+        align-items: center;
+        background-color: #f8f8f8;
+        padding: 10px;
+      }
+      .top-banner img {
+        height: 50px;
+        margin-right: 20px;
+      }
+      .top-banner nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-banner">
+      <a href="/home">
+        <img src="/src/images/15784.svg" alt="Shroomies Logo">
+      </a>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/announcements">Announcements</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+    <div class="loading-icon"></div>
+    <div id="container">
+      <img id="message" src="/src/images/mainBanner.png" alt="Welcome!" width="80%" height="auto">
+      <img id="message" src="/src/images/page2.png" alt="This image could not load for some reason..." width="80%" height="auto">
+      <img id="message" src="/src/images/page3.png" alt="This image could not load for some reason..." width="80%" height="auto">
+      <img id="message" src="/src/images/page4.png" alt="This image could not load for some reason..." width="80%" height="auto">
+      <img id="message" src="/src/images/page5.png" alt="This image could not load for some reason..." width="80%" height="auto">
+      <img id="message" src="/src/images/page6.png" alt="This image could not load for some reason..." width="80%" height="auto">
+    </div>
+  </body>
+</html>
