@@ -2,92 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="2;url=/about">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/src/images/15784.svg" type="image/svg">
-    <title>Shroomies</title>
+    <title>Welcome to Shroom_Room</title>
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-database-compat.js"></script>
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-firestore-compat.js"></script> -->
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-functions-compat.js"></script> -->
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-messaging-compat.js"></script> -->
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-storage-compat.js"></script> -->
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-analytics-compat.js"></script> -->
-    <script defer src="/__/firebase/11.4.0/firebase-remote-config-compat.js"></script>
-    <!-- <script defer src="/__/firebase/11.4.0/firebase-performance-compat.js"></script> -->
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <style media="screen">
-      body { text-align: center; background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center; }
-      #container { display: flex; flex-direction: column; align-items: center; justify-content: center; overflow-y: auto; }
-      /*#message { background: white; max-width: 360px; margin: auto; padding: 32px 24px; border-radius: 3px; }*/
-      #message h2 { color: #039be5; font-weight: bold; font-size: 24px; margin: 0 0 8px; }
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 16px; }
-      #loading { border: 4px solid rgba(0,0,0,0.1); border-radius: 50%; border-top: 4px solid #039be5; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
-      .loading-icon { 
-        animation: spin 1s linear infinite; 
-        display: inline-block; 
-        width: 50px; 
-        height: 50px; 
-        border: 5px solid rgba(0, 0, 0, 0.1); 
-        border-top: 5px solid #039be5; 
-        border-radius: 50%; 
+    <script defer src="/__/firebase/11.9.0/firebase-app-compat.js"></script>
+    <style>
+      /* Modern top banner styles */
+      .top-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        padding: 0.75rem 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       }
-      @keyframes spin { 100% { transform: rotate(360deg); } }
-      #logo { border-radius: 50%; }
-      img#message { margin-left: 20px; margin-right: 20px; max-width: calc(100% - 40px); height: auto; }
+      .top-banner-logo {
+        height: 40px;
+        width: auto;
+        margin-right: 1.5rem;
+      }
+      .top-banner-items {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .top-banner-item {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.2s;
+      }
+      .top-banner-item:hover {
+        color: #ffb347;
+      }
     </style>
   </head>
   <body>
-    <div class="loading-icon"></div>
+    <div id="top-banner-root"></div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#loading');
-        const messageEl = document.querySelector('#message');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // Load banner settings from page-settings.json
+      fetch('./page-settings.json')
+        .then(res => res.json())
+        .then(settings => {
+          const banner = document.createElement('div');
+          banner.className = 'top-banner';
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.style.display = 'none';
-          messageEl.style.display = 'block';
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+          // Logo
+          const logo = document.createElement('img');
+          logo.className = 'top-banner-logo';
+          logo.src = settings.logo || '';
+          logo.alt = settings.logoAlt || 'Logo';
+          banner.appendChild(logo);
+
+          // Items
+          const itemsDiv = document.createElement('div');
+          itemsDiv.className = 'top-banner-items';
+          (settings.items || []).forEach(item => {
+            const a = document.createElement('a');
+            a.className = 'top-banner-item';
+            a.href = item.href || '#';
+            a.textContent = item.label || '';
+            itemsDiv.appendChild(a);
+          });
+          banner.appendChild(itemsDiv);
+
+          document.getElementById('top-banner-root').appendChild(banner);
+        })
+        .catch(() => {
+          // Optionally handle error or show fallback banner
+        });
     </script>
   </body>
 </html>

@@ -3,51 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/src/images/15784.svg" type="image/svg">
-    <title>Page Not Found</title>
+    <title>Page Not Found!</title>
+    <link rel="stylesheet" href="./assets/style.css">
 
     <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-      #message { background: white; max-width: 360px; padding: 32px 24px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1); text-align: center; font-family: 'Courier New', Courier, monospace; display: none; }
-      @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
-      #message h1 { font-size: 64px; font-weight: bold; color: orange; margin: 0 0 16px; font-family: 'Inconsolata', monospace; }
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 16px; color: rgba(0,0,0,0.6); }
-      .loading-icon { 
-        animation: spin 1s linear infinite; 
-        display: inline-block; 
-        width: 50px; 
-        height: 50px; 
-        border: 5px solid rgba(0, 0, 0, 0.1); 
-        border-top: 5px solid orange; 
-        border-radius: 50%; 
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: "Source Code Pro", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; font: "Source Code Pro"; }
+      #message h3 { color: #888; font-weight: notmal; font-size: 16px; margin: 16px 0 12px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: normal; /* font-weight: 300; original */ color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
       }
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      #error-logo { border-radius: 50%; }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <div class="loading-icon"></div>
     <div id="message">
-      <img id="error-logo" src="./src/images/15784.svg" alt="Logo" width="50" height="50"><br/>
-      <h1>404</h1>
-      <p>Looks like you took a wrong turn?</p><br/>
-      <a href="javascript:history.back(-1)">Go Back</a>
-      <p>The requested link <code id="requested-path"></code> doesn't exist.</p>
+      <h2>404</h2>
+      <h1>Page Not Found!</h1>
+      <p>Perhaps you took a wrong turn?</p>
+      <!--<h3>Why am I seeing this?</h3>-->
+      <p>You might have a typo in the link or clicked on a non-existing link.</p>
     </div>
-    <script>
-      $("#message").hide();
-      $(".loading-icon").show();
-      $(document).ready(function() {
-        $('#requested-path').text(window.location.pathname);
-        setTimeout(function() {
-          $('.loading-icon').hide();
-          $('#message').show();
-        }, 2000);
-      });
-    </script>
   </body>
 </html>

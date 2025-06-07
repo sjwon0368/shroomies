@@ -1,9 +1,0 @@
-{
-  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
-  "rules": {
-    "announcements": {
-      ".read": true, // Allow read access for 'readonly-user'
-      ".write": "newData.child('adminId').val() === 'shroomiesadmin12'" // Validate adminId in the new data
-    }
-  }
-}

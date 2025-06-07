@@ -1,0 +1,9 @@
+{
+  "logo": "assets/logo.png",
+  "logoAlt": "Shroom Room Logo",
+  "items": [
+    { "label": "Home", "href": "/" },
+    { "label": "Getting Started", "href": "/about" },
+    { "label": "Chat", "href": "/contact" }
+  ]
+}

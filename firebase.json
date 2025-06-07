@@ -5,34 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "/",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/error",
-        "destination": "/404.html"
-      },
-      {
-        "source": "/about",
-        "destination": "/about.html"
-      },
-      {
-        "source": "/announcements",
-        "destination": "/announcements.html"
-      },
-      {
-        "source": "/home",
-        "destination": "/home.html"
-      }
     ]
-  },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
-  },
-  "database": {
-    "rules": "database.rules.json"
   }
 }

@@ -1,6 +1,0 @@
-Good news, `firebase deploy` worked!
-Go check it out at https://shroomies12.web.app/
-that was easy
-
-Saph if u know how to use bash(terminal) then can you run `firebase deploy` after making changes that the website needs?
-thx
