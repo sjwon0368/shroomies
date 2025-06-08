@@ -1,9 +1,9 @@
 {
-  "logo": "assets/logo.png",
+  "logo": "assets/images/15784.svg",
   "logoAlt": "Shroom Room Logo",
   "items": [
     { "label": "Home", "href": "/" },
-    { "label": "Getting Started", "href": "/about" },
-    { "label": "Chat", "href": "/contact" }
+    { "label": "Getting Started", "href": "/getstarted" },
+    { "label": "Chat", "href": "/ircchat" }
   ]
 }

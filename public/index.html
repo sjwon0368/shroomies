@@ -3,76 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Shroom_Room</title>
+    <link rel="icon" href="./assets/images/15784.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Shroom_Room Clowder</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/11.9.0/firebase-app-compat.js"></script>
-    <style>
-      /* Modern top banner styles */
-      .top-banner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: linear-gradient(90deg, #232526 0%, #414345 100%);
-        padding: 0.75rem 2rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        margin: 0;
-      }
-      .top-banner-logo {
-        height: 40px;
-        width: auto;
-        margin-right: 1.5rem;
-      }
-      .top-banner-items {
-        display: flex;
-        gap: 1.5rem;
-      }
-      .top-banner-item {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: color 0.2s;
-      }
-      .top-banner-item:hover {
-        color: #ffb347;
-      }
-    </style>
   </head>
   <body>
     <div id="top-banner-root"></div>
-    <script>
-      // Load banner settings from page-settings.json
-      fetch('./page-settings.json')
-        .then(res => res.json())
-        .then(settings => {
-          const banner = document.createElement('div');
-          banner.className = 'top-banner';
-
-          // Logo
-          const logo = document.createElement('img');
-          logo.className = 'top-banner-logo';
-          logo.src = settings.logo || '';
-          logo.alt = settings.logoAlt || 'Logo';
-          banner.appendChild(logo);
-
-          // Items
-          const itemsDiv = document.createElement('div');
-          itemsDiv.className = 'top-banner-items';
-          (settings.items || []).forEach(item => {
-            const a = document.createElement('a');
-            a.className = 'top-banner-item';
-            a.href = item.href || '#';
-            a.textContent = item.label || '';
-            itemsDiv.appendChild(a);
-          });
-          banner.appendChild(itemsDiv);
-
-          document.getElementById('top-banner-root').appendChild(banner);
-        })
-        .catch(() => {
-          // Optionally handle error or show fallback banner
-        });
-    </script>
+    <main class="main-content">
+      <div class="welcome-text">
+        Welcome to Shroomies!
+      </div>
+      <section class="announcements-section">
+        <h2>Announcements</h2>
+        <ul id="announcement-list" class="announcement-list">
+          <!-- Announcements will be loaded here by JS -->
+        </ul>
+      </section>
+    </main>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

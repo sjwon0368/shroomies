@@ -1,0 +1,123 @@
+.top-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #6c63ff 0%, #b8c6db 100%);
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin: 0 0 2rem 0;
+}
+
+.top-banner-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 1.5rem;
+}
+
+.top-banner-items {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-banner-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.top-banner-item:hover {
+  color: #6c63ff;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+body {
+  background: #f7f8fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(108,99,255,0.07);
+}
+
+.welcome-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2d2d2d;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.announcements-section {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1rem;
+  background: #f2f6ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(108,99,255,0.04);
+}
+
+.announcements-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: #4a4a4a;
+  font-weight: 600;
+}
+
+.announcement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.announcement-item {
+  background: #fff;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+  color: #222;
+  border-left: 4px solid #6c63ff;
+  box-shadow: 0 1px 4px rgba(108,99,255,0.05);
+  font-size: 1.05rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  padding: 0;
+}
+
+.announcement-title {
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  background: none;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.announcement-title:hover {
+  background: #f2f6ff;
+}
+
+.announcement-content {
+  padding: 1rem 1.2rem 1.2rem 1.2rem;
+  border-top: 1px solid #ececec;
+  background: #f8faff;
+  color: #333;
+  font-weight: 400;
+  font-size: 1rem;
+  white-space: pre-line;
+  line-height: 1.6;
+  display: none;
+}
+
+.announcement-item.open {
+  box-shadow: 0 2px 8px rgba(108,99,255,0.10);
+}

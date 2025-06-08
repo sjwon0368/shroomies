@@ -1,0 +1,16 @@
+{
+  "announcements": [
+    {
+      "title": "[Events] Celebration Events are coming soon!",
+      "content": "Hope to see you there!\nPlease don't stress about gaming! It's just for fun!"
+    },
+    {
+      "title": "[Announcement] Prize Wheel - Click here to see the new winners!",
+      "content": "Congratulations to the latest winners:\n- (Winner 1)\n- (Winner 2)\n- (Winner 3)\n\nThe prize wheel will be spun every week!\nRewards will be given out to 3 winners.\nCheck out our clowder room to see if you won!"
+    },
+    {
+      "title": "[Announcement] Where to find Shroom_Room members",
+      "content": "If you found your nickname on the winners list, you can get the prizes from the clowder leader: Agent_Schweetz\nYou can find Agent_Schweetz easily on most times, but if you cannot find the leader,\ncheck your timezone, Agent_Schweetz can be online after 4PM(England, UK) on weekdays.\nAnd mostly online at any other time on weekends.\n\nIf you're finding other members like sjwon0368(Site Management), or our co-leaders,\ntry searching for them in our IRC network.\nYou can read on how to join the channel in the Chat page.\n\nMember timezones:\nAgent_Schweetz: England, UK\nsjwon0368: South Korea, Asia"
+    }
+  ]
+}
